@@ -627,6 +627,14 @@ elif menu == "Patient Analytics":
             yaxis=dict(showgrid=True, gridcolor='#ecf0f1')
         )
         st.plotly_chart(fig, use_container_width=True)
+csv = patient_df.to_csv(index=False).encode("utf-8")
+
+ st.download_button(
+    label="Download Patient Analytics (CSV)",
+    data=csv,
+    file_name="patient_analytics.csv",
+    mime="text/csv"
+)
 
 # ============================================================================
 # DEPARTMENT PERFORMANCE PAGE
