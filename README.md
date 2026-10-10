@@ -66,6 +66,100 @@ Insurance Coverage & Claim Approval Rate
 
 Doctor Workload (avg patients per doctor)
 
+## Installation and Setup
+
+Follow these steps to run the Hospital Analytics Dashboard on your local machine.
+
+### Prerequisites
+
+Before starting, make sure you have installed:
+
+- Python 3
+- Git
+- A code editor such as Visual Studio Code
+
+### Step 1: Clone the Repository
+
+Open a terminal or Command Prompt and run:
+
+```bash
+git clone https://github.com/suyashitiwari4/Smart_Hospital_Analytics.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd Smart_Hospital_Analytics
+```
+
+### Step 2: Create a Virtual Environment
+
+Creating a virtual environment helps keep project dependencies separate from other Python projects.
+
+**Windows:**
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**macOS/Linux:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### Step 3: Install Dependencies
+
+Install the Python packages required by the project:
+
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Make sure the repository contains a `requirements.txt` file listing the project's dependencies. If it does not, add one containing the packages actually used by the project.
+
+### Step 4: Generate the Dataset
+
+If the CSV datasets are not already included in the repository, run the data generation script:
+
+```bash
+python hospital_data.py
+```
+
+This script generates synthetic hospital datasets, including patient, admission, billing, and doctor records. Check the script to confirm where the files are saved.
+
+### Step 5: Run the Dashboard
+
+Start the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+Streamlit should open the dashboard in your browser. If it does not, open the local URL displayed in the terminal.
+
+### Troubleshooting
+
+- **Python is not recognized:** Check that Python is installed and available in your system PATH.
+- **Module not found:** Activate the virtual environment and install the dependencies.
+- **CSV file not found:** Generate the datasets and check that the file paths match those expected by the scripts.
+- **Streamlit command not found:** Run `python -m pip install streamlit` in the active environment, or install the project's full requirements.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make and test your changes.
+4. Commit and push your changes to your fork.
+5. Open a pull request describing your contribution.
+
+Please provide clear descriptions of bug fixes, improvements, and documentation updates.
+
  # Conclusion
  
 This project demonstrates a complete data science pipeline applied to the healthcare domain — from synthetic data generation and EDA to interactive dashboarding and machine learning. It reflects practical skills in data engineering, visualization, and predictive analytics, simulating real-world hospital operations monitoring.
